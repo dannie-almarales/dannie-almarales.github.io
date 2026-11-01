@@ -239,8 +239,7 @@
   </footer>
 
   <script>
-    function changeLanguage(language) document.getElementById('backLinkTop').textContent =
-  english ? '← Back to homepage' : '← Volver al inicio'; {
+    function changeLanguage(language) {
       const english = language === 'en';
 
       document.documentElement.lang = language;
@@ -253,6 +252,9 @@
         english
           ? 'The curriculum is available in Spanish (PDF).'
           : 'Consulta mi currículum en formato PDF.';
+
+      document.getElementById('backLinkTop').textContent =
+  english ? '← Back to homepage' : '← Volver al inicio';
 
       document.getElementById('downloadButton').textContent =
         english ? 'Download PDF' : 'Descargar PDF';
