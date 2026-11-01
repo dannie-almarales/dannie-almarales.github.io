@@ -27,6 +27,21 @@
       color: var(--text);
     }
 
+    .back-home {
+  margin-bottom: 18px;
+}
+
+.back-home a {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.back-home a:hover {
+  text-decoration: underline;
+}
+
     header {
       background: var(--navy);
       color: var(--white);
@@ -184,6 +199,10 @@
 
   <main>
 
+    <div class="back-home">
+  <a href="index.html" id="backLinkTop">← Volver al inicio</a>
+</div>
+
     <div class="toolbar">
       <p id="description">
         Consulta mi currículum en formato PDF.
@@ -220,7 +239,8 @@
   </footer>
 
   <script>
-    function changeLanguage(language) {
+    function changeLanguage(language) document.getElementById('backLinkTop').textContent =
+  english ? '← Back to homepage' : '← Volver al inicio'; {
       const english = language === 'en';
 
       document.documentElement.lang = language;
